@@ -7,20 +7,24 @@
 ## Project Overview
 Predict **student exam scores** based on **hours of study** using **linear regression** implemented from scratch with **gradient descent**.
 
+This project demonstrates how a simple supervised machine learning model can predict outcomes based on a single feature.
+
 ---
 
 ## Dataset
-I created a dataset with **20 data points**:
+The dataset is downloaded from [Kaggle: Student Scores](https://www.kaggle.com/datasets/kamleshsam/student-scores) and contains **25 data points**:
 
-| Hours | Score |
-|-------|-------|
-| 1.5   | 12    |
-| 2     | 15    |
-| ...   | ...   |
+| Hours | Scores |
+|-------|--------|
+| 2.5   | 21     |
+| 5.1   | 47     |
+| 3.2   | 27     |
+| ...   | ...    |
 
 - **Hours** → number of study hours  
 - **Scores** → marks obtained  
-- Formula: `Score = w * Hours + b + random_noise`
+- The dataset is in **CSV format** (`student_scores.csv`)  
+- It can be loaded directly using `pandas.read_csv()`
 
 ---
 
@@ -28,7 +32,7 @@ I created a dataset with **20 data points**:
 
 1. **Predict Function:** `y_hat = w * x + b`  
 2. **Cost Function:** Measures error using **Mean Squared Error**  
-3. **Gradient Descent:** Updates `w` and `b` to minimize cost  
+3. **Gradient Descent:** Updates `w` and `b` iteratively to minimize cost  
 4. **Prediction & Visualization:**  
    - Scatter plot: actual scores  
    - Red line: best fit linear regression  
@@ -43,11 +47,13 @@ jupyter notebook Students_scores_Regression.ipynb
 python Students_scores_Regression.py
 Example Output:
 
+yaml
+Copy code
 Hours studied: 7
-
-Predicted Score: 39.66
-
+Predicted Score: 67.37
 Notes
 Demonstrates linear regression, gradient descent, and predictions
 
 Can be extended to multiple features for multiple regression
+
+Dataset can be updated easily without changing the code
